@@ -1,1 +1,19 @@
-asdf
+
+# FYI this code requires a global admin with no MFA on it.
+# Look at updating the code to work with an Azure app registration instead.
+
+Setup as an Azure Runbook to run several times a day.
+
+It will poll all delegated access clients and perform the following tasks:
+
+Enable-AdminAuditLogs
+Check-Forwarders
+Enable-BannedWordsRule
+Check-GlobalAdmins
+Enable-DisplayNameRule
+Disable-IMAPTenantLevel
+Disable-IMAPExistingMailboxes
+Disable-POPTenantLevel
+Disable-POPExistingMailboxes
+Disable-JunkFolders
+Check-LicensedAdmins
